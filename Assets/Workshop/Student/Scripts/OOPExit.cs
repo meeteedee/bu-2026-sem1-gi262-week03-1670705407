@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class OOPExit : MonoBehaviour
-{
-    public string Name;
-    public int positionX;
-    public int positionY;
-    public OOPMapGenerator mapGenerator;
+public class OOPExit : Identity
 
+{
+    public GameObject youWin;
+
+    public override void Hit()
+    {
+        youWin.SetActive(true);
+    }
+    
 }
+
